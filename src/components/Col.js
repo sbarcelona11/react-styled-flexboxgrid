@@ -24,6 +24,14 @@ const Col = styled.div`
     flex-direction: column-reverse;
   `}
 
+  ${p => p.lastXs && `
+    order: 1;
+  `}
+  
+  ${p => p.firstXs && `
+    order: -1;
+  `}
+
   ${p => Object.keys(p)
     .filter(k => ~DIMENSION_NAMES.indexOf(k))
     .sort((k1, k2) => DIMENSION_NAMES.indexOf(k1) - DIMENSION_NAMES.indexOf(k2))
@@ -66,6 +74,8 @@ Col.displayName = 'Col'
 Col.propTypes = {
   ...DimensionPropTypes,
   reverse: PropTypes.bool,
+  lastXs: PropTypes.bool,
+  firstXs: PropTypes.bool,
   children: PropTypes.node
 }
 

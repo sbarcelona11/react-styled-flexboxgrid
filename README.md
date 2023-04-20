@@ -84,6 +84,8 @@ The `<Grid>` component is optional and can help to wrap children in a fixed/flui
 - `smOffset`
 - `mdOffset`
 - `lgOffset` _(Integer)_: Offset the column.
+- `lastXs` (Boolean): change the order to be the last column
+- `firstXs` (Boolean): change the order to be the first column
 
 
 ### Configuration

@@ -79,6 +79,8 @@ declare module "react-styled-flexboxgrid" {
       smOffset?: number;
       mdOffset?: number;
       lgOffset?: number;
+      lastXs?: boolean;
+      firstXs?: boolean;
     }
 
   }
