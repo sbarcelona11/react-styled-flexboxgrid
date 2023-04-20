@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import config, { DIMENSION_NAMES } from '../config'
 
-const margin = () => {
+const marginsAndPaddings = () => {
   return css`
     margin-right: auto;
     margin-left: auto;
@@ -11,10 +11,10 @@ const margin = () => {
     padding-left: ${p => config(p).outerMargin + 'rem'};
   `
 }
+// TODO include margins and paddings
+//${p => !p.fluid ? marginsAndPaddings() : ''}
 
 const Grid = styled.div`
-  ${p => !p.fluid ? margin() : ''}
-
   ${p => !p.fluid && css`
     ${DIMENSION_NAMES.map(t =>
     config(p).container[t] && config(p).media[t]`
